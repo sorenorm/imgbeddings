@@ -94,7 +94,7 @@ class imgbeddings:
 
     def process_inputs(self, inputs):
         inputs = [square_pad(self.to_pil(x).convert("RGB")) for x in inputs]
-        image_inputs = self.processor(images=inputs, return_tensors="np")
+        image_inputs = self.processor(images=inputs)
         return image_inputs
 
     def create_embeddings(self, inputs):
